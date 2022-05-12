@@ -1,0 +1,21 @@
+.list-items {
+  display: flex;
+  font-size: 1.25rem;
+}
+.list-items span {
+  flex-grow: 1;
+  margin-left: 1.25rem;
+  user-select: none;
+  cursor: pointer;
+}
+.list-items.important span {
+  font-weight: bold;
+  color: steelblue;
+}
+.list-items.done span {
+  text-decoration: line-through;
+}
+.list-items button {
+  width: 35px;
+  margin: 3px;
+}
