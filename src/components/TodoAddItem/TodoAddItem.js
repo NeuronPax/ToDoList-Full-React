@@ -6,8 +6,9 @@ export default class TodoAddItem extends Component {
   state = {value: ''}
   onInputChange = ({target: {value}}) => this.setState({value})
   onFormSubmit = e => {
+    const value = this.state.value.trim()
     e.preventDefault()
-    this.props.onAddItem(this.state.value)
+    value.length && this.props.onAddItem(value)
     this.setState({value: ''})
   }
   render() {

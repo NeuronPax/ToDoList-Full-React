@@ -8,11 +8,11 @@
   user-select: none;
   cursor: pointer;
 }
-.list-items.important span {
+.important span {
   font-weight: bold;
   color: steelblue;
 }
-.list-items.done span {
+.done span {
   text-decoration: line-through;
 }
 .list-items button {
