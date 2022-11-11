@@ -1,0 +1,22 @@
+{
+  "tododata": [
+    {
+      "id": 1668171281649,
+      "label": "Drink Coffee",
+      "important": false,
+      "done": false
+    },
+    {
+      "id": 1668171295126,
+      "label": "Create Awesome App",
+      "important": true,
+      "done": false
+    },
+    {
+      "id": 1668171299874,
+      "label": "Have a Lunch",
+      "important": false,
+      "done": true
+    }
+  ]
+}

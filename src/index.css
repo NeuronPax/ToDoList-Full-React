@@ -1,3 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  background: #e5e5e5;
+	@apply bg-gray-200 text-gray-700;
+}
+
+.important {
+	@apply text-blue-400 font-bold;
+}
+
+.done {
+	@apply line-through;
 }
