@@ -2,8 +2,8 @@ const TodoListItem = ({label, important, done, onDeleteItem, onEditItem}) => (
 	<span className='flex items-center'>
 		<span
 			className={`flex-1 ml-5 select-none cursor-pointer ${
-				important && 'important'
-			} ${done && 'done'}`}
+				important && 'font-bold text-blue-400'
+			} ${done && 'line-through'}`}
 			onClick={() => onEditItem({done: !done})}>
 			{label}
 		</span>

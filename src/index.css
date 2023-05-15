@@ -5,11 +5,3 @@
 body {
 	@apply bg-gray-200 text-gray-700;
 }
-
-.important {
-	@apply text-blue-400 font-bold;
-}
-
-.done {
-	@apply line-through;
-}

@@ -1,9 +1,8 @@
-import {useSelector, useDispatch} from 'react-redux'
-import {onFilter} from '../redux/todoSlice'
+import {useActions, useData} from '../redux/hooks'
 
 const FilterStatus = () => {
-	const {filter} = useSelector(({todo}) => todo)
-	const dispatch = useDispatch()
+	const {filter} = useData()
+	const {onFilter} = useActions()
 	const btn = ['All', 'Active', 'Done']
 	return (
 		<div className='flex border border-gray-400 rounded-md divide-x divide-gray-400 overflow-hidden'>
@@ -15,7 +14,7 @@ const FilterStatus = () => {
 							? 'bg-blue-300 hover:bg-blue-400'
 							: 'hover:bg-gray-400'
 					} hover:text-white transition`}
-					onClick={() => dispatch(onFilter(name))}>
+					onClick={() => onFilter(name)}>
 					{name}
 				</button>
 			))}

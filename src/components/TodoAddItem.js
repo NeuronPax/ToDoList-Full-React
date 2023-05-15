@@ -1,13 +1,12 @@
+import {useAddItemMutation} from '../redux/todoListApi'
 import {useState} from 'react'
-import {useDispatch} from 'react-redux'
-import {addTodo} from '../redux/todoSlice'
 
 const TodoAddItem = () => {
-	const dispatch = useDispatch()
+	const [addItem] = useAddItemMutation()
 	const [value, setValue] = useState('')
-	const onFormSubmit = e => {
+	const onFormSubmit = async e => {
 		e.preventDefault()
-		value.trim() && dispatch(addTodo(value.trim()))
+		value.trim() && (await addItem(value.trim()))
 		setValue('')
 	}
 	return (
